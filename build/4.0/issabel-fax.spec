@@ -18,7 +18,6 @@ Requires: /usr/bin/tiff2pdf
 Requires: php-PHPMailer
 
 Obsoletes: elastix-fax
-Provides: elastix-fax
 
 %description
 Issabel Fax Module 
