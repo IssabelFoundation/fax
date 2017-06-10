@@ -27,7 +27,7 @@
   | The Original Code is: XXX Open Source.                           |
   | The Initial Developer of the Original Code is PaloSanto Solutions    |
   +----------------------------------------------------------------------+
-  $Id: elastix-faxevent.php,v 1.1 2007/01/09 23:49:36 alex Exp $
+  $Id: issabel-faxevent.php,v 1.1 2007/01/09 23:49:36 alex Exp $
 */
 // Ugly - should not depend on anything under /var/www/html
 ini_set('include_path', '/var/www/html:'.ini_get('include_path'));
@@ -35,7 +35,7 @@ ini_set('include_path', '/var/www/html:'.ini_get('include_path'));
 require_once 'Console/Getopt.php';
 
 define('HYLAFAX_SPOOLDIR', '/var/spool/hylafax');
-define('ELASTIX_FAXDIR', '/var/www/faxes');
+define('ISSABEL_FAXDIR', '/var/www/faxes');
 define('DSN_FAX', 'sqlite:/var/www/db/fax.db');
 
 load_default_timezone();
@@ -174,7 +174,7 @@ function action_faxRecvEvent($opt)
     // Run faxinfo on the tifffile to fetch basic information on the fax
     // Synthetize a faxinfo structure for use with commonFaxProcessing()
     /*
-    recvq/fax000000003.tif (ftp://elastix.palosanto.com:4559/recvq/fax000000003.tif):
+    recvq/fax000000003.tif (ftp://issabel.issabel.com:4559/recvq/fax000000003.tif):
               Sender: 
                Pages: 1
              Quality: Normal
@@ -187,7 +187,7 @@ function action_faxRecvEvent($opt)
              CallID1: 
              CallID2: 
          Received On: ttyIAX1
-              CommID: 000000003 (ftp://elastix.palosanto.com:4559/log/c000000003)
+              CommID: 000000003 (ftp://issabel.issabel.com:4559/log/c000000003)
     */
     $faxinfo = array(
         'properties'    =>  array(
@@ -258,7 +258,7 @@ function commonFaxProcessing($conn, $faxinfo, $sDirection, $status)
     // Create required folder for PDF of processed fax
     $sDestDir = createFaxDirectory($conn, $sDirection,
         $faxinfo['properties']['number'], $faxinfo['properties']['commid']);
-    $sFaxesDir = ELASTIX_FAXDIR.'/'.$sDestDir;
+    $sFaxesDir = ISSABEL_FAXDIR.'/'.$sDestDir;
 
     // Convert all of the component files into PDF
     $pdflist = array();
@@ -376,20 +376,20 @@ function commonFaxProcessing($conn, $faxinfo, $sDirection, $status)
  * @param   string      $number Number that sent or received the fax
  * @param   string      $commID Identification number of the fax job
  * 
- * @return  string      Newly created directory relative to ELASTIX_FAXDIR
+ * @return  string      Newly created directory relative to ISSABEL_FAXDIR
  */
 function createFaxDirectory($conn, $type, $number, $commID)
 {
     // Check whether base directory is writable. Expected 0775 asterisk.uucp
     $sDestDir = (($type == 'in') ? 'recvd' : 'sent');
-    if (!is_writable(ELASTIX_FAXDIR.'/'.$sDestDir)) dblog_exit($conn, "Directory not writable: $sDestDir");
+    if (!is_writable(ISSABEL_FAXDIR.'/'.$sDestDir)) dblog_exit($conn, "Directory not writable: $sDestDir");
 
     // Build path with system date
     $curdate = getdate();
     $sDestDir .= '/'.implode('/', array($curdate['year'], $curdate['mon'], $curdate['mday'], $number, $commID));
-    if (!is_dir(ELASTIX_FAXDIR.'/'.$sDestDir)) {
+    if (!is_dir(ISSABEL_FAXDIR.'/'.$sDestDir)) {
         $oldmask = umask(0);
-        $r = mkdir(ELASTIX_FAXDIR.'/'.$sDestDir, 0777, TRUE);
+        $r = mkdir(ISSABEL_FAXDIR.'/'.$sDestDir, 0777, TRUE);
         umask($oldmask);
         if (!$r) dblog_exit($conn, "Failed to create document path: $sDestDir");
     }
@@ -452,7 +452,7 @@ function getIdModemDevice($conn, $sModemDevice)
  * @param   string      $sCompanyName           Company name for fax job
  * @param   string      $sCompanyNumber         Company number for fax job
  * @param   string      $sDirection             One of 'in' or 'out'
- * @param   string      $sFaxDir                Location of 'fax.pdf' relative to ELASTIX_FAXDIR
+ * @param   string      $sFaxDir                Location of 'fax.pdf' relative to ISSABEL_FAXDIR
  * 
  * @return  void
  */
@@ -497,7 +497,7 @@ function readNotificationEmail($conn, $idModemDevice)
  * @param   string      $sDestinationEmail      Destination email
  * @param   string      $sCompanyName           Company name for fax job
  * @param   string      $sCompanyNumber         Company number for fax job
- * @param   string      $sPdfPath               Path to fax PDF relative to ELASTIX_FAXDIR
+ * @param   string      $sPdfPath               Path to fax PDF relative to ISSABEL_FAXDIR
  * 
  * @return void
  */
@@ -536,7 +536,7 @@ function sendEmailFax($conn, $sRepresentativeName, $sDestinationEmail, $sCompany
     $mail->FromName = $emailInfo['remitente'];
     $mail->AddAddress($sDestinationEmail);
     $mail->WordWrap = 50;                                 // set word wrap to 50 characters
-    $mail->AddAttachment(ELASTIX_FAXDIR.'/'.$sPdfPath);
+    $mail->AddAttachment(ISSABEL_FAXDIR.'/'.$sPdfPath);
     $mail->IsHTML(false);                                  // set email format to TEXT
         
     $mail->Subject = $emailInfo['subject'];

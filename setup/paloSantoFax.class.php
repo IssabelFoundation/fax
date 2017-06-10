@@ -76,7 +76,7 @@ class paloFax {
         
         $this->dirIaxmodemConf = "/etc/iaxmodem";
         $this->dirHylafaxConf  = "/var/spool/hylafax/etc";
-        $this->rutaDB = "$arrConf[elastix_dbdir]/fax.db";
+        $this->rutaDB = "$arrConf[issabel_dbdir]/fax.db";
         $this->firstPort=40000;
         //instanciar clase paloDB
         $pDB = new paloDB("sqlite3:///".$this->rutaDB);
@@ -421,7 +421,7 @@ class paloFax {
     function refreshFaxConfiguration()
     {
         $this->errMsg = '';
-        $sComando = '/usr/bin/elastix-helper faxconfig --refresh 2>&1';
+        $sComando = '/usr/bin/issabel-helper faxconfig --refresh 2>&1';
         $output = $ret = NULL;
         exec($sComando, $output, $ret);
         if ($ret != 0) {

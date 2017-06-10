@@ -7,6 +7,6 @@ for($i=1; $i<$_SERVER['argc']; $i++)
 if(file_exists("bin/faxrcvd-avantfax.php"))
 	echo `bin/faxrcvd-avantfax.php $cmdLine`;
 
-if(file_exists("bin/faxrcvd-elastix.php"))
-	echo `bin/faxrcvd-elastix.php  $cmdLine`;
+if(file_exists("bin/faxrcvd-issabel.php"))
+	echo `bin/faxrcvd-issabel.php  $cmdLine`;
 ?>

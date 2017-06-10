@@ -35,7 +35,7 @@ $arrLangModule=array(
 "Fax Clients" => "Clienti Fax",
 "Clients allowed to send faxes" => "Clienti care pot trimite faxuri",
 "No IP entered, you must keep at least the IP 127.0.0.1" => "Nu ati introdus nici un IP, trebuie sa tineti macar IPul 127.0.0.1",
-"These IPs are allowed to send faxes through Issabel.  You must insert one IP per row.  We recommend keeping localhost and 127.0.0.1  in the configuration because some processes could need them." => "Aceste ip-uri pot trimite faxuri din elastix.<br>
+"These IPs are allowed to send faxes through Issabel.  You must insert one IP per row.  We recommend keeping localhost and 127.0.0.1  in the configuration because some processes could need them." => "Aceste ip-uri pot trimite faxuri din Issabel.<br>
 Trebuie sa introduceti unul pe fiecare rand.  Recomandam mentinerea <br> localhost si 127.0.0.1 in configuratie deoarece anumite procese din sistem au nevoie de ele.",
 "Could not read the clients configuration." => "Nu pot citi configuratia.",
 "IP" => "IP",

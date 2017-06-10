@@ -54,7 +54,7 @@ class paloFaxVisor
         global $arrConf;
         
         //instanciar clase paloDB
-        $pDB = new paloDB("sqlite3:///$arrConf[elastix_dbdir]/fax.db");
+        $pDB = new paloDB("sqlite3:///$arrConf[issabel_dbdir]/fax.db");
     	if (!empty($pDB->errMsg)) {
             $this->errMsg = $pDB->errMsg;
     	} else{

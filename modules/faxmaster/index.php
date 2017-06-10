@@ -115,7 +115,7 @@ function _moduleContent(&$smarty, $module_name)
 function modificar_archivos_mail($email, &$error)
 {
     $output = $retval = NULL;
-    exec('/usr/bin/elastix-helper faxconfig --faxmaster 2>&1', $output, $retval);
+    exec('/usr/bin/issabel-helper faxconfig --faxmaster 2>&1', $output, $retval);
     if (is_array($output)) $error = implode('<br/>', $output);
     return ($retval == 0);
 }
