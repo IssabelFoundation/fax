@@ -526,7 +526,8 @@ function sendEmailFax($conn, $sRepresentativeName, $sDestinationEmail, $sCompany
     require_once 'PHPMailer/class.phpmailer.php';
 
     $mail = new PHPMailer();
-    $mail->From = $emailInfo['remite'];
+    //$mail->From = $emailInfo['remite'];
+    $mail->setFrom($emailInfo['remite']);
     $mail->FromName = $emailInfo['remitente'];
     $mail->AddAddress($sDestinationEmail);
     $mail->WordWrap = 50;                                 // set word wrap to 50 characters
