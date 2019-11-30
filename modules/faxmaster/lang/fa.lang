@@ -2,9 +2,10 @@
 /* vim: set expandtab tabstop=4 softtabstop=4 shiftwidth=4:
   Codificación: UTF-8
   +----------------------------------------------------------------------+
-  | Issabel version 1.0                                                  |
+  | Issabel version 4.0                                                  |
   | http://www.issabel.org                                               |
   +----------------------------------------------------------------------+
+  | Copyright (c) 2019 Issabel Foundation                                |
   | Copyright (c) 2006 Palosanto Solutions S. A.                         |
   +----------------------------------------------------------------------+
   | The contents of this file are subject to the General Public License  |
@@ -18,20 +19,18 @@
   | limitations under the License.                                       |
   +----------------------------------------------------------------------+
   | The Initial Developer of the Original Code is PaloSanto Solutions    |
-  |                                                                      |
   | Translate by: Haamed Kouhfallah                                      |
-  | Email: haamed@cytco.net                                              |                                                                    |
-
-
+  | Email: k.haamed@gmail.com                                            |
   +----------------------------------------------------------------------+
-   $Id: fa.lang,v 1.2 2008/04/21 10:11:44 bmacias@palosanto.com Exp $ */
+  $Id: fa.lang,v 1.1 2019-11-30 04:08:50 Haamed Kouhfallah k.haamed@gmail.com Exp $
+*/
 global $arrLangModule;
 $arrLangModule=array(
 "Fax Master" => "فکس اصلی",
 "Fax Master Configuration" => "پیکربندی فکس اصلی",
 "Value for Fax Master is not valid" => "مقدار فکس اصلی معتبر نیست",
 "Fax Master Email" => "ایمیل فکس اصلی",
-"Write the email address which will receive the notifications of received messages, errors and activity summary of the Fax Server" => "تعیین یک ایمیل جهت دریافت اعلام فکس جدید، خطاها و یا خلاصه فعالیت های سرور فکس",
-"Error when saving Fax Master" => "خطا هنگام ذخيره فکس اصلي",
+"Write the email address which will receive the notifications of received messages, errors and activity summary of the Fax Server"=>"Write the email address which will receive the notifications of received messages, errors and activity summary of the Fax Server",
+"Error when saving Fax Master" => "خطا به هنگام ذخيره سازي ايميل",
 );
 ?>
