@@ -19,7 +19,7 @@
   +----------------------------------------------------------------------+
   | The Initial Developer of the Original Code is PaloSanto Solutions    |
   +----------------------------------------------------------------------+
-  $Id: paloSantoSendFax.class.php, Thu 26 Dec 2019 03:20:05 PM EST, nicolas@issabel.com
+  $Id: paloSantoSendFax.class.php, Thu 26 Dec 2019 03:35:08 PM EST, nicolas@issabel.com
 */
 class paloSantoSendFax {
     var $_DB;
@@ -70,7 +70,7 @@ class paloSantoSendFax {
         file_put_contents($ruta_temp, iconv('UTF-8', 'ISO-8859-15//TRANSLIT', $data_content));
         $ruta_archivo = tempnam('/tmp', 'data_');
         $output = $retval = NULL;
-        exec('/usr/sbin/textfmt -B -Ml=0.4in -p11 < '.
+        exec('/usr/sbin/textfmt -B -f Courier-Bold -Ml=0.4in -p11 < '.
             escapeshellarg($ruta_temp).' > '.escapeshellarg($ruta_archivo),
             $output, $retval);
         unlink($ruta_temp);
