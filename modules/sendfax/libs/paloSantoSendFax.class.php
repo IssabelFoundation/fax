@@ -19,7 +19,8 @@
   +----------------------------------------------------------------------+
   | The Initial Developer of the Original Code is PaloSanto Solutions    |
   +----------------------------------------------------------------------+
-  $Id: paloSantoSendFax.class.php, Thu 26 Dec 2019 03:04:12 PM EST, nicolas@issabel.com
+  $Id: paloSantoSendFax.class.php, Thu 26 Dec 2019 03:20:05 PM EST, nicolas@issabel.com
+*/
 class paloSantoSendFax {
     var $_DB;
     var $errMsg;
