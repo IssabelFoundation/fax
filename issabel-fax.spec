@@ -2,14 +2,14 @@
 
 Summary: Issabel Fax Module
 Name: issabel-fax
-Version: 4.0.0
-Release: 3
+Version: 5.0.0
+Release: 1
 License: GPL
 Group:   Applications/System
 Source0: issabel-%{modname}-%{version}.tar.gz
 BuildRoot: %{_tmppath}/%{name}-%{version}-root
 BuildArch: noarch
-Requires(pre): issabel-framework >= 2.3.0-2
+Requires(pre): issabel-framework >= 5.0.0-1
 Requires(pre): iaxmodem, hylafax
 # ghostscript supplies eps2eps, ps2pdfwr, gs
 Requires: ghostscript
