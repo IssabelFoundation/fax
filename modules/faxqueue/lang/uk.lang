@@ -1,0 +1,49 @@
+<?php
+/* vim: set expandtab tabstop=4 softtabstop=4 shiftwidth=4:
+   Codificación: UTF-8
+  +----------------------------------------------------------------------+
+  | Issabel Version 4.0                                                  |
+  | http://www.issabel.org                                               |
+  +----------------------------------------------------------------------+
+  | Copyright (c) 2017 Issabel Foundation                                |
+  | Copyright (c) 2006 Palosanto Solutions S. A.                         |
+  +----------------------------------------------------------------------+
+  | The contents of this file are subject to the General Public License  |
+  | (GPL) Version 2 (the "License"); you may not use this file except in |
+  | compliance with the License. You may obtain a copy of the License at |
+  | http://www.opensource.org/licenses/gpl-license.php                   |
+  |                                                                      |
+  | Software distributed under the License is distributed on "AS IS"     |
+  | basis, WITHOUT WARRANTY OF ANY KIND, either express or implied. See  |
+  | the License for the specific language governing rights and           |
+  | limitations under the License.                                       |
+  +----------------------------------------------------------------------+
+  | The Initial Developer of the Original Code is PaloSanto Solutions    |
+  |                                                                      |
+  | Translated by: LLC LeNET                                             |
+  | Email: support@lenet.com.ua                                          |
+  +----------------------------------------------------------------------+
+  $Id: uk.lang,v 1.7 2023-10-29 16:18:42 LLC LENET support@lenet.ua Exp $ */
+global $arrLangModule;
+$arrLangModule=array(
+	"Fax Queue" => "Черга Факсів",
+	"Job ID" => "ID Завдання",
+	"Priority" => "Пріоритет",
+	"Destination" => "Призначення",
+	"Pages" => "Сторінки",
+	"Retries" => "Повторні Спроби",
+	"Status" => "Статус",
+	"Sent %d pages of %d" => "Надіслано %d сторінок з %d",
+	"Try %d of %d" => "Повторна Спроба %d з %d",
+	"Busy signal detected" => "Виявлено сигнал зайнятості",
+	"No carrier detected" => "Носія не виявлено",
+	"No answer from remote" => "Немає відповіді від віддаленого абонента",
+	"Could not read request file" => "Не вдалося прочитати файл запиту",
+	"Blocked by another job" => "Заблоковано іншою роботою",
+	"Delayed by prior call" => "Затримка через попередній дзвінок",
+	"Are you sure to cancel selected jobs?" => "Ви впевнені що хочете скасувати вибрані завдання?",
+	"Cancel job" => "Скасувати Завдання",
+	"Failed to cancel job" => "Не вдалося скасувати завдання",
+	"Blocked by concurrent cal" => "Заблоковано одночасним викликом",
+);
+?>

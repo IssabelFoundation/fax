@@ -1,0 +1,41 @@
+<?php
+/* vim: set expandtab tabstop=4 softtabstop=4 shiftwidth=4:
+   Coding: UTF-8
+  +----------------------------------------------------------------------+
+  | Issabel Version 5.0                                                  |
+  | http://www.issabel.org                                               |
+  +----------------------------------------------------------------------+
+  | Copyright (c) 2023 Issabel Foundation                                |
+  | Copyright (c) 2006 Palosanto Solutions S. A.                         |
+  +----------------------------------------------------------------------+
+  | The contents of this file are subject to the General Public License  |
+  | (GPL) Version 2 (the "License"); you may not use this file except in |
+  | compliance with the License. You may obtain a copy of the License at |
+  | http://www.opensource.org/licenses/gpl-license.php                   |
+  |                                                                      |
+  | Software distributed under the License is distributed on "AS IS"     |
+  | basis, WITHOUT WARRANTY OF ANY KIND, either express or implied. See  |
+  | the License for the specific language governing rights and           |
+  | limitations under the License.                                       |
+  +----------------------------------------------------------------------+
+  | The Initial Developer of the Original Code is PaloSanto Solutions    |
+  |                                                                      |
+  | Translated by: LLC LeNET                                             |
+  | Email: support@lenet.com.ua                                          |
+  +----------------------------------------------------------------------+
+  $Id: uk.lang,v 1.7 2023-11-02 18:35:50 LLC LeNET support@lenet.com.ua Exp $ */
+global $arrLangModule;
+$arrLangModule=array(
+	"Fax Clients" => "Факс Клієнти",
+	"Clients allowed to send faxes" => "Клієнти яким дозволено відправляти факси",
+	"No IP entered, you must keep at least the IP 127.0.0.1" => "Жодного IP не вказано, обов'язково має бути принаймні 127.0.0.1",
+	"These IPs are allowed to send faxes through Issabel.  You must insert one IP per row.  We recommend keeping localhost and 127.0.0.1  in the configuration because some processes could need them." => "Цим IP дозволено відправляти факси через Issabel.<br>Ви повинні вставити одну IP-адресу в рядок. Ми рекомендуємо зберегти <br> localhost і 127.0.0.1 у конфігурації, оскільки вони можуть знадобитися деяким <br> процесам.",
+	"Could not read the clients configuration." => "Неможливо прочитати конфігурацію клієнтів.",
+	"IP" => "IP",
+	"Error" => "Помилка",
+	"Message" => "Повідомлення",
+	"Configuration updated successfully" => "Конфігурацію успішно оновлено",
+	"Write error when writing the new configuration." => "Помилка під час запису нової конфігурації",
+	"Apply Changes" => "Застосувати Зміни",
+);
+?>

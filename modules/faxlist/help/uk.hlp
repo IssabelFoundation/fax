@@ -1,0 +1,25 @@
+<html>
+<header>
+  <link rel="stylesheet" href="/themes/{$THEMENAME}/styles.css">
+  <link rel="stylesheet" href="/themes/{$THEMENAME}/help.css">
+</header>
+<body>
+
+<h1>{$node_name}</h1>
+
+<p>Опція "Список Віртуальних Факсів" меню "Факс" в Issabel дає змогу перевірити список усіх віртуальних факсів, включно зі статусом кожного з них.</p>
+
+<div class="hlp_figureS"><img src="../modules/{$node_id}/images/uk_hlp_fax_virtual_list.png" border="0" />
+<p>Зображення 1</p></div>
+<br />
+
+<p>Також при натисканні на назву віртуального факсу відображається інформація про нього:</p>
+
+<div class="hlp_figures"><img src="../modules/{$node_id}/images/uk_hlp_fax_virtual_view.png" border="0" />
+<p>Зображення 2</p></div>
+<br />
+
+<p>Тут ви можете Редагувати та Видаляти Віртуальний Факс.</p>
+
+</body>
+</html>

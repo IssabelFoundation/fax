@@ -1,0 +1,51 @@
+<?php
+/* vim: set expandtab tabstop=4 softtabstop=4 shiftwidth=4:
+   Codificación: UTF-8
+  +----------------------------------------------------------------------+
+  | Issabel Version 4.0                                                  |
+  | http://www.issabel.org                                               |
+  +----------------------------------------------------------------------+
+  | Copyright (c) 2017 Issabel Foundation                                |
+  | Copyright (c) 2006 Palosanto Solutions S. A.                         |
+  +----------------------------------------------------------------------+
+  | The contents of this file are subject to the General Public License  |
+  | (GPL) Version 2 (the "License"); you may not use this file except in |
+  | compliance with the License. You may obtain a copy of the License at |
+  | http://www.opensource.org/licenses/gpl-license.php                   |
+  |                                                                      |
+  | Software distributed under the License is distributed on "AS IS"     |
+  | basis, WITHOUT WARRANTY OF ANY KIND, either express or implied. See  |
+  | the License for the specific language governing rights and           |
+  | limitations under the License.                                       |
+  +----------------------------------------------------------------------+
+  | The Initial Developer of the Original Code is PaloSanto Solutions    |
+  |                                                                      |
+  | Translated by: LLC LeNET                                             |
+  | Email: support@lenet.com.ua                                          |
+  +----------------------------------------------------------------------+
+  $Id: uk.lang,v 1.7 2023-10-29 16:29:29 LLC LENET support@lenet.ua Exp $ */
+global $arrLangModule;
+$arrLangModule=array(
+	"Fax Viewer" => "Перегляд Факсів",
+	"Search" => "Пошук",
+	"Company Name" => "Назва Компанії",
+	"Company Fax" => "Факс Компанії",
+	"Fax Date" => "Дата Факсу",
+	"File" => "Файл",
+	"Fax Destiny" => "Адресат Факсу",
+	"No Data Found" => "Даних не Знайдено",
+	"Are you sure you wish to delete fax (es)?" => "Ви впевнені що хочете видалити факс(и)?",
+	"Unable to eliminate pdf file from the path." => "Не вдалося видалити pdf-файл зі шляху.",
+	"Unable to eliminate pdf file from the database." => "Не вдалося видалити pdf-файл із бази даних.",
+	"Type Fax" => "Тип Факсу",
+	"All" => "Все",
+	"in" => "вхід",
+	"out" => "вихід",
+	"ERROR" => "ПОМИЛКА",
+	"Type" => "Тип",
+	"done" => "Готово",
+	"failed" => "Не вдалося",
+	"killed" => "Процес зупинено",
+	"timedout" => "Минув Час Очікування",
+);
+?>

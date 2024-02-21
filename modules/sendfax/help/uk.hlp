@@ -1,0 +1,17 @@
+<html>
+    <header>
+        <link rel="stylesheet" href="/themes/{$THEMENAME}/styles.css">
+        <link rel="stylesheet" href="/themes/{$THEMENAME}/help.css">
+    </header>
+    <body>
+        <h1>{$node_name}</h1>
+	<p>Опція "Надіслати Факс" в меню "Факс" в Issabel дозволяє надсилати факсимільні повідомлення на один або декілька номерів. Тут ви можете ввести текст, який хочете надіслати, і натиснути кнопку "Надіслати"</p>
+        <div class="hlp_figures"><img src="../modules/{$node_id}/images/uk_hlp_send_fax.png" border="0" />
+	<p>Зображення 1</p></div>
+	<br />
+	<p>Також ви можете надсилати файли у форматі .pdf, .tiff та .txt</p>
+	<div class="hlp_figures"><img src="../modules/{$node_id}/images/uk_hlp_send_fax_file.png" border="0" />
+	<p>Зображення 2</p></div>
+	<br />
+    </body>
+</html>

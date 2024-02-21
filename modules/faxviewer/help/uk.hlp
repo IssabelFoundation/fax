@@ -1,0 +1,21 @@
+<html>
+<header>
+  <link rel="stylesheet" href="/themes/{$THEMENAME}/styles.css">
+  <link rel="stylesheet" href="/themes/{$THEMENAME}/help.css">
+</header>
+<body>
+
+<h1>{$node_name}</h1>
+
+<p>Опція "Перегляд Факсів" меню "Факс" показує список з усіма факсами, які були надіслані та отримані у віртуальній папці "Факси". Ви можете завантажити факси, натиснувши на назву файлу.</p>
+<div class="hlp_figures"><img src="../modules/{$node_id}/images/hlp_fax_viewer.png" border="0" />
+<p>Зображення 1</p></div>
+<br />
+
+<p>За замовчуванням відображаються всі файли, але ви можете відфільтрувати їх за назвою компанії, факсом компанії, датою факсу або типом факсу.</p>
+
+<div class="hlp_figures"><img src="../modules/{$node_id}/images/hlp_fax_viewer_filter.png" border="0" />
+<p>Зображення 2</p></div>
+<br />
+</body>
+</html>
